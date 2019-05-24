@@ -1,5 +1,7 @@
 # ziming
 
+这是一个重新构建的个人站，用来熟练当前技术
+
 ## Project setup
 ```
 npm install
