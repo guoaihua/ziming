@@ -28,7 +28,7 @@
 		</div></div>
 		<div class="clear"></div>
 	</div>
-	<div class="clear"></div>	
+	<div class="clear"></div>
 
 	<div class="swipebox-container" v-show="boxshow">
 		<div class="swipebox-slider">
@@ -43,54 +43,54 @@
 			<span class="arrows-left" @click="prev"></span>
 			<span class="arrows-right" @click="next"></span>
 			<span class="close" @click="closeslider"></span>
-		</div>	
-	</div>	
+		</div>
+	</div>
 	</div>
 
 
 </template>
 
 <script>
-	export default {
-		data(){
-			return{
-				boxshow:false,
-				index:0
-			}		
-		},
-		methods:{
-			showslider:function () {
-				this.boxshow=!this.boxshow;
-			},
-			closeslider:function () {
-				this.boxshow=!this.boxshow;
-			},
-			prev:function () {			
-				if(this.index<=0){
-					this.index=0;
-				}else{
-					this.index--;
-				}
-				$(".swipebox-slider").css("transform","translate3d(-"+100*(this.index)+"%,0,0)");
-			$(".swipebox-slider div:nth-child("+(this.index+2)+")").removeClass("current");
-				$(".swipebox-slider div:nth-child("+(this.index+1)+")").addClass("current");
+export default {
+  data() {
+    return {
+      boxshow: false,
+      index: 0,
+    };
+  },
+  methods: {
+    showslider() {
+      this.boxshow = !this.boxshow;
+    },
+    closeslider() {
+      this.boxshow = !this.boxshow;
+    },
+    prev() {
+      if (this.index <= 0) {
+        this.index = 0;
+      } else {
+        this.index--;
+      }
+      $('.swipebox-slider').css('transform', `translate3d(-${100 * (this.index)}%,0,0)`);
+      $(`.swipebox-slider div:nth-child(${this.index + 2})`).removeClass('current');
+      $(`.swipebox-slider div:nth-child(${this.index + 1})`).addClass('current');
 
-				console.log(this.index);
-			},
-			next:function(){
-				if(this.index>=5){
-					this.index=5;
-				}else{
-					this.index++;
-				}
-				$(".swipebox-slider").css("transform","translate3d(-"+100*(this.index)+"%,0,0)");
+      console.log(this.index);
+    },
+    next() {
+      if (this.index >= 5) {
+        this.index = 5;
+      } else {
+        this.index++;
+      }
+      $('.swipebox-slider').css('transform', `translate3d(-${100 * (this.index)}%,0,0)`);
 
-				$(".swipebox-slider div:nth-child("+(this.index)+")").removeClass("current");
-				$(".swipebox-slider div:nth-child("+(this.index+1)+")").addClass("current");
-				console.log(this.index);
-			}
-		}
-	}
+      $(`.swipebox-slider div:nth-child(${this.index})`).removeClass('current');
+      $(`.swipebox-slider div:nth-child(${this.index + 1})`).addClass('current');
+      console.log(this.index);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -98,11 +98,11 @@
 	.address a {
 		text-decoration: none;
 		color: #ccc;
-	}	
+	}
 
 	.address a:hover {
 		color: skyblue;
-	} 
+	}
 	.text3d {
 			color:#3d3d3d;
 			font-weight: bold;
@@ -139,7 +139,7 @@
 			transition: all 0.4s ease-in-out;
 			text-align: center;
 			opacity: 0;
-			padding: 0 15px; 
+			padding: 0 15px;
 			box-sizing: border-box;
 		}
 
@@ -179,13 +179,13 @@
 		height: 100%;
 		position: relative;
 	}
-	
+
 	.current img {
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
-	}	
+	}
 
 	/* 控制按钮 */
 	.arrows {

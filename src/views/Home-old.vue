@@ -1,10 +1,11 @@
+
 <template>
-	<div class="home ">
+	<div class="home">
 		<div class="box clear">
 			<img src="/static/imgs/borders1.png" class='img-responsive'>
 			<marquee behavior="scroll" direction="up" class="scrollText" onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="3">
 				<p>亲爱的访客，您好！</p>
-				<p>此网站是萌新，利用假期搭建的基于vue框架的个人网站。由于技术方面和时间方面的原因，网站兼容性就暂时没精力去改善了，目前谷歌等主流浏览器是可以正常体验的，ie，手机端等是不存在的。哈哈，依据优雅降级原则，此网站的兼容性和其它功能会在日后的版本更新中体现。欢迎大神前来指教，也希望与志同道合的小伙伴们一起奋斗！</p>  
+				<p>此网站是萌新，利用假期搭建的基于vue框架的个人网站。由于技术方面和时间方面的原因，网站兼容性就暂时没精力去改善了，目前谷歌等主流浏览器是可以正常体验的，ie，手机端等是不存在的。哈哈，依据优雅降级原则，此网站的兼容性和其它功能会在日后的版本更新中体现。欢迎大神前来指教，也希望与志同道合的小伙伴们一起奋斗！</p>
 			</marquee>
 			<div class="intro">
 				<div class="line">
@@ -17,11 +18,11 @@
 						<span>喜欢古风，爱笛箫</span>
 						<span>爱旅游，梦想走遍万水千山</span>
 						<span>志同道合的小伙伴快来认亲</span>
-					</div>					
+					</div>
 					<hr class="split-line">
 					<ul>
 						<li>
-							<ul  class="line-inblock">							
+							<ul  class="line-inblock">
 								<li>电话</li>
 								<li>17707170570</li>
 							</ul>
@@ -60,7 +61,7 @@
 <script>
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 	.address a {
 		text-decoration: none;
@@ -69,7 +70,7 @@
 	.line {
 		position: relative;
 	}
-	
+
 	.line:hover::before {
 	content: '';
 	position: absolute;
@@ -78,8 +79,8 @@
 	bottom: 0;
 	right: 0;
 	border: 2px solid skyblue;
- 	animation: lineOne 8s linear infinite; 
-	animation-delay:-4s; 
+ 	animation: lineOne 8s linear infinite;
+	animation-delay:-4s;
 	z-index: 99;
 	}
 
@@ -88,8 +89,8 @@
     	25%{clip:rect(0,3px,329px,0)}
     	50%{clip:rect(326px,400px,329px,2px)}
     	75%{clip:rect(0,400px,328px,396px)}
-}   
- 
+}
+
   .line:hover::after {
 	content: '';
 	position: absolute;
@@ -98,8 +99,8 @@
 	bottom: 0;
 	right: 0;
 	border: 2px solid skyblue;
-	animation-delay: 4s; 
-	 animation: lineTwo 8s linear infinite; 
+	animation-delay: 4s;
+	 animation: lineTwo 8s linear infinite;
 	 z-index: 99;
 }
 
@@ -108,8 +109,7 @@
     	25%{clip:rect(0,2px,329px,0)}
     	50%{clip:rect(326px,400px,329px,2px)}
     	75%{clip:rect(0,400px,328px,396px)}
-}   
-
+}
 
 
 	/* 线框流动结束 */
@@ -140,37 +140,36 @@
 		animation: rotateWord 18s linear infinite 0s;
 	}
 
-.rw-words span:nth-child(2) { 
-    -webkit-animation-delay: 3s; 
-	-ms-animation-delay: 3s; 
-	animation-delay: 3s; 
+.rw-words span:nth-child(2) {
+    -webkit-animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	animation-delay: 3s;
 	color: #6b889d;
 }
-.rw-words span:nth-child(3) { 
-    -webkit-animation-delay: 6s; 
-	-ms-animation-delay: 6s; 
-	animation-delay: 6s; 
-	color: #6b739d;	
+.rw-words span:nth-child(3) {
+    -webkit-animation-delay: 6s;
+	-ms-animation-delay: 6s;
+	animation-delay: 6s;
+	color: #6b739d;
 }
-.rw-words span:nth-child(4) { 
-    -webkit-animation-delay: 9s; 
-	-ms-animation-delay: 9s; 
-	animation-delay: 9s; 
+.rw-words span:nth-child(4) {
+    -webkit-animation-delay: 9s;
+	-ms-animation-delay: 9s;
+	animation-delay: 9s;
 	color: #7a6b9d;
 }
-.rw-words span:nth-child(5) { 
-    -webkit-animation-delay: 12s; 
-	-ms-animation-delay: 12s; 
-	animation-delay: 12s; 
+.rw-words span:nth-child(5) {
+    -webkit-animation-delay: 12s;
+	-ms-animation-delay: 12s;
+	animation-delay: 12s;
 	color: #8d6b9d;
 }
-.rw-words span:nth-child(6) { 
-    -webkit-animation-delay: 15s; 
-	-ms-animation-delay: 15s; 
-	animation-delay: 15s; 
+.rw-words span:nth-child(6) {
+    -webkit-animation-delay: 15s;
+	-ms-animation-delay: 15s;
+	animation-delay: 15s;
 	color: #9b6b9d;
 }
-
 
 
 @keyframes rotateWord {
@@ -197,7 +196,7 @@
 		position: relative;
 		margin: 0 auto;
 	}
-	
+
 	.intro {
 		position: absolute;
 		top: 16%;
@@ -207,7 +206,7 @@
 		padding: 1.5rem;
 		border-radius: 5px;
 	}
-	
+
 	.scrollText {
 		height: 50%;
 		position: absolute;
@@ -216,8 +215,7 @@
 		margin-left: 10rem;
 		color: rgba(240, 248, 253, 0.76);
 	}
-	
-	
+
 
 	.intro .line {
 	/* 	border:4px double white;  */
@@ -241,7 +239,7 @@
 	.line-inblock li {
 		display: inline-block;
 		color: white;
-		margin-right: 5%; 
+		margin-right: 5%;
 	}
 
 
@@ -268,7 +266,7 @@
 		.box img {
 			margin-left: 8rem;
 		}
-		
+
 		.intro {
 			top: 9%;
 			width: 73%;
