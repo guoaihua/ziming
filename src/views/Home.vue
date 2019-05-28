@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <navbar></navbar>
+    <navbar class="zm-header"></navbar>
   </div>
 </template>
 
@@ -15,6 +15,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .home {
 
+    }
 </style>
